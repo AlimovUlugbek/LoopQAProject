@@ -1,6 +1,7 @@
 const { defineConfig, devices } = require('@playwright/test');
 
 module.exports = defineConfig({
+  fullyParallel: true,
   testDir: './tests',
   reporter: [
     ['list'], // To get a detailed step-by-step output with test nesting
