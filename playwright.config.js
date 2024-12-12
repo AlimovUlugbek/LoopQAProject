@@ -9,5 +9,19 @@ module.exports = defineConfig({
   ],
   // Optional: Set the output directory for reports
   outputDir: 'test-results',
+  projects: [
+    {
+      name: 'Chromium',          // This project will run tests in Chromium
+      use: { browserName: 'chromium' },  // Define browser to use
+    },
+    {
+      name: 'Firefox',           // This project will run tests in Firefox
+      use: { browserName: 'firefox' },   // Define browser to use
+    },
+    {
+      name: 'WebKit',            // This project will run tests in WebKit
+      use: { browserName: 'webkit' },    // Define browser to use
+    },
+  ],
   workers: 4,  // Set the number of workers for parallel testing (you can adjust this number)
 });
